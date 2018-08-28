@@ -1,7 +1,3 @@
-//
-//  Variables
-//  _____________________________________________
-
 $checkout-tooltip__hover__z-index              : $tooltip__z-index !default;
 $checkout-tooltip-breakpoint__screen-m         : $modal-popup-breakpoint-screen__m !default;
 
@@ -25,15 +21,24 @@ $checkout-tooltip-content-mobile-popup__width  : 200px !default;
 $checkout-tooltip-content-mobile__right        : -($indent__s) !default;
 $checkout-tooltip-content-mobile__top          : 30px + $checkout-tooltip-icon-arrow__font-size !default;
 
-//
-//  Common
-//  _____________________________________________
-
 .field-tooltip {
     cursor: pointer;
     position: absolute;
     right: 0;
-    top: 1px;
+    top: 0;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    flex-direction: column;
+    .action-help {
+        width: 25px;
+        display: block;
+        height: 25px;
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
 
     &._active {
         z-index: $checkout-tooltip__hover__z-index;
@@ -50,14 +55,6 @@ $checkout-tooltip-content-mobile__top          : 30px + $checkout-tooltip-icon-a
     }
 
     .field-tooltip-action {
-        @include lib-icon-font(
-            $checkout-tooltip-icon__content,
-            $_icon-font-size        : $checkout-tooltip-icon__font-size,
-            $_icon-font-text-hide   : true,
-            $_icon-font-color       : $checkout-tooltip-icon__color,
-            $_icon-font-color-hover : $checkout-tooltip-icon__hover__color,
-            $_icon-font-color-active: false
-        );
 
         &:focus {
             ._keyfocus & {
@@ -75,50 +72,35 @@ $checkout-tooltip-content-mobile__top          : 30px + $checkout-tooltip-icon-a
     }
 
     .field-tooltip-content {
-        background: $checkout-tooltip-content__background-color;
-        border: $checkout-tooltip-content__border-width solid $checkout-tooltip-content__border-color;
-        border-radius: $checkout-tooltip-content__border-width;
-        font-size: $checkout-tooltip-content__font-size;
-        padding: $checkout-tooltip-content__padding;
-        width: $checkout-tooltip-content__width;
-        display: none;
-        left: 38px;
         position: absolute;
-        text-transform: none;
-        top: -9px;
-        word-wrap: break-word;
+        top: 0;
+        left: 38px;
+        display: none;
+        width: $checkout-tooltip-content__width;
         z-index: 2;
+        border: 1px solid #f7f7f9;
+        font-size: 13px;
+        padding: 10px;
+        background: #f7f7f9;
+        text-transform: none;
+        word-wrap: break-word;
 
         &:before,
         &:after {
             @include lib-arrow(
                 $_position: left,
                 $_size    : $checkout-tooltip-icon-arrow__font-size,
-                $_color   : $checkout-tooltip-content__background-color
+                $_color   : #f7f7f9
             );
             left: $checkout-tooltip-icon-arrow__left;
-            top: $checkout-tooltip-content__padding;
+            top: 10px;
             content: '';
             display: block;
             position: absolute;
             z-index: 3;
         }
-
-        &:before {
-            border-right-color: $checkout-tooltip-content__active__border-color;
-        }
-
-        &:after {
-            border-right-color: $checkout-tooltip-content__background-color;
-            width: 1px;
-            z-index: 4;
-        }
     }
 }
-
-//
-//  Mobile
-//  _____________________________________________
 
 @include max-screen($screen__xs) {
     .modal-popup {

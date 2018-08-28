@@ -55,21 +55,11 @@
         .reset {
             margin: $indent__s 0;
         }
-        .note {
-            display: block;
-            margin: 0 0 $indent__base;
-        }
     }
 }
 .block-cart-failed {
     @extend .abs-shopping-cart-items;
     margin-top: $indent__xl;
-    .block-title {
-        font-size: headings($heading-h2, font-size);
-        strong {
-            font-weight: headings($heading-h2, font-weight);
-        }
-    }
     .actions {
         text-align: center;
         .action {
@@ -121,9 +111,6 @@
         @extend .abs-shopping-cart-items-desktop;
         .actions {
             text-align: left;
-        }
-        .actions.primary {
-            float: right;
         }
         .block-content {
             @extend .abs-add-clearfix-desktop;

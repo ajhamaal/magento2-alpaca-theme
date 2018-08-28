@@ -16,7 +16,6 @@
 .abs-action-link-button {
     @include lib-button();
     @include lib-link-as-button();
-    border-radius: $button__border-radius;
 }
 
 //
@@ -51,29 +50,11 @@
     }
 }
 
-//
-//  Button reset width: floats: margins
-//  ---------------------------------------------
-
-.abs-button-responsive {
-    @include lib-button-responsive();
-}
-
 @include min-screen($screen__m) {
     .abs-button-desktop {
         width: auto;
     }
 }
-
-@include max-screen($screen__m) {
-    .abs-button-responsive-smaller {
-        @include lib-button-responsive();
-    }
-}
-
-//
-//  Blocks in 2 columns
-//  ---------------------------------------------
 
 @mixin abs-blocks-2columns() {
     width: 48.8%;
@@ -101,59 +82,10 @@
 }
 
 //
-//  Reset image alignment in container
-//  ---------------------------------------------
-
-.abs-reset-image-wrapper {
-    height: auto;
-    padding: 0 !important;
-
-    .product-image-photo {
-        position: static;
-    }
-}
-
-//
-//  Adaptive images
-//  ---------------------------------------------
-
-.abs-adaptive-images {
-    display: block;
-    height: auto;
-    max-width: 100%;
-}
-
-.abs-adaptive-images-centered {
-    display: block;
-    height: auto;
-    margin: 0 auto;
-    max-width: 100%;
-}
-
-//
-//  Title for login blocks
-//  ---------------------------------------------
-
-.abs-login-block-title {
-    strong {
-        font-weight: 500;
-    }
-
-    font-size: 18px;
-    border-bottom: 1px solid $secondary__color;
-    margin-bottom: 15px;
-    padding-bottom: 12px;
-}
-
-//
 //  Abstract block title
 //  ---------------------------------------------
 
 .abs-block-title {
-    & > strong {
-        @include lib-heading(h3);
-    }
-
     margin-bottom: 15px;
 }
 
@@ -172,10 +104,6 @@
     .box-title {
         display: inline-block;
         margin: 0 0 $indent__xs;
-
-        & > span {
-            @include lib-heading(h4);
-        }
 
         & > .action {
             font-weight: 400;
@@ -691,20 +619,6 @@
         right: -$indent__s;
         top: 3px;
     }
-
-    &-expanded {
-        @include lib-icon-font-symbol(
-            $_icon-font-content: $icon-up,
-            $_icon-font-position: after
-        );
-    }
-}
-
-.abs-tax-total-expanded {
-    @include lib-icon-font-symbol(
-        $_icon-font-content: $icon-up,
-        $_icon-font-position: after
-    );
 }
 
 //
@@ -859,13 +773,6 @@
             position: absolute;
             right: $indent__s;
             top: 0;
-        }
-
-        &.active {
-            @include lib-icon-font-symbol(
-                $_icon-font-content : $icon-up,
-                $_icon-font-position: after
-            );
         }
     }
 }
@@ -1057,10 +964,6 @@
         @extend .abs-add-box-sizing;
         position: relative;
     }
-
-    input {
-        @extend .abs-field-date-input;
-    }
 }
 
 //
@@ -1109,11 +1012,11 @@
     }
 
     &:before {
-        border-bottom-color: $checkout-tooltip-content__border-color;
+        border-bottom-color: #f4f4f4;
     }
 
     &:after {
-        border-bottom-color: $checkout-tooltip-content__background-color;
+        border-bottom-color: #f4f4f4;
         top: 1px;
     }
 }
@@ -1126,22 +1029,6 @@
     .abs-checkout-tooltip-content-position-top-mobile {
         @include abs-checkout-tooltip-content-position-top();
     }
-}
-
-//
-//  Checkout title
-//  ---------------------------------------------
-
-.abs-checkout-title {
-    border-bottom: $checkout-step-title__border;
-    padding-bottom: $checkout-step-title__padding;
-    @include lib-typography(
-        $_font-size  : $checkout-step-title__font-size,
-        $_font-weight: $checkout-step-title__font-weight,
-        $_font-family: false,
-        $_font-style : false,
-        $_line-height: false
-    );
 }
 
 //
@@ -1220,13 +1107,6 @@
                 .amount {
                     border-bottom: 0;
                 }
-
-                .amount .price {
-                    @include lib-icon-font-symbol(
-                        $_icon-font-content : $icon-up,
-                        $_icon-font-position: after
-                    );
-                }
             }
         }
 
@@ -1284,13 +1164,6 @@
     }
 
     &.active {
-        & > .title {
-            @include lib-icon-font-symbol(
-                $_icon-font-content : $icon-prev,
-                $_icon-font-position: after
-            );
-        }
-
         & > .content {
             display: block;
         }
