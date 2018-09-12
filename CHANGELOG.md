@@ -9,12 +9,18 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Input classes
 - Sidebar blocks heading
+- Catalog structure
+- Moved sidebar blocks to the bottom on mobile
 
 ### Fixed
 - State select
 
 ### Removed
 - Lazyload from captcha in forgot password page
+
+## [0.5.1] - 2018-09-06
+### Changed
+- Updated components version to version 0.9.1
 
 ## [0.5.0] - 2018-09-05
 ### Changed
