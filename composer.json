@@ -8,6 +8,9 @@
       "snowdog/module-alpaca-components": "dev-test",
       "snowdog/module-menu": "^2.7.0"
     },
+    "require-dev": {
+        "snowdog/frontools": "^1.5"
+    },
     "autoload": {
         "files": [
             "registration.php"
