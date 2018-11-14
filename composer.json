@@ -4,12 +4,10 @@
     "license": "MIT",
     "type": "magento2-theme",
     "require": {
-      "magento/framework": "*",
-      "snowdog/module-alpaca-components": "dev-test",
-      "snowdog/module-menu": "^2.7.0"
-    },
-    "require-dev": {
-        "snowdog/frontools": "^1.5"
+        "magento/framework": "*",
+        "snowdog/frontools": "^1.5",
+        "snowdog/module-alpaca-components": "dev-test",
+        "snowdog/module-menu": "^2.7.0"
     },
     "autoload": {
         "files": [
