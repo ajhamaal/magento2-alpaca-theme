@@ -5,12 +5,15 @@ All notable changes to this project will be documented in this file.
 ### Added
 - Reset password styles
 - Email to a Friend page styles
+- Missing homepagge container class for top notifications
+- Templates for product's page breadcrumbs
 
 ### Fixed
 - Missing class for product attributes
 
 ### Changed
 - Refactor dropdown list and nested list
+- Refactor menu and submenu templates
 
 ## [1.0.0] - 2018-10-15
 ### Changed
