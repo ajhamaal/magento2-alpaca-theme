@@ -3,6 +3,16 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 ### Added
+- Support for escape key in dropdown script
+
+### Changed
+- Refactor filters and accessibility improvements
+
+### Fixed
+- Duplicated `email` id on company users view
+
+## [1.1.0] - 2019-01-07
+### Added
 - Reset password styles
 - Email to a Friend page styles
 - Missing homepagge container class for top notifications
