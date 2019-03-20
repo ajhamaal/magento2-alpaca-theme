@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+### Changed
+- wishlist and catalog elements for focus state
+
+## [1.2.0] - 2019-03-04
 ### Added
 - Support for escape key in dropdown script
 - Quickorder page styles
