@@ -2,13 +2,17 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+### Added
+- Adding data-testid attributes for autometed tests Cypress.io 
+
 ### Fixed
 - Add-to-cart for solr templates with updated form_key
+- fix multiple rating
 
 ### Added
 - Focus & keyboard support for mega-menu
-### Fixed
-- fix multiple rating
+- add scroll to top button
 
 ## [1.3.1] - 2019-05-30
 ### Fixed
