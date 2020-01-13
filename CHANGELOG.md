@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+- Page builder styles
+- Skip navigation links
+
 ## [1.4.0] - 2019-10-15
 ### Added
 - Adding data-testid attributes for autometed tests Cypress.io
